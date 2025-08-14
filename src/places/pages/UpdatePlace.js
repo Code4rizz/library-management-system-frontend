@@ -124,6 +124,16 @@ const UpdatePlace = () => {
             initialValue={loadedPlace.description}
             initialValid={true}
           />
+           <Input
+            id="description"
+            element="textarea"
+            label="Description"
+            validators={[VALIDATOR_MINLENGTH(5)]}
+            errorText="Please enter a valid description (min. 5 characters)."
+            onInput={inputHandler}
+            initialValue={loadedPlace.description}
+            initialValid={true}/>
+
           <Button type="submit" disabled={!formState.isValid}>
             UPDATE PLACE
           </Button>
